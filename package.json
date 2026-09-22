@@ -1,0 +1,96 @@
+{
+  "name": "dsh-workspace-colors",
+  "version": "0.1.0",
+  "description": "Workspace color labels for DeepSeek Harness v0.1.7-alpha.1",
+  "type": "module",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.3"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.3",
+    "@deepseek-ai/dsh-client-store": "0.1.7-alpha.1",
+    "@deepseek-ai/dsh-client-ui-primitives": "0.1.7-alpha.1",
+    "@deepseek-ai/dsh-client-ui-slots": "0.1.7-alpha.1",
+    "@deepseek-ai/dsh-client-ui-workspace": "0.1.7-alpha.1",
+    "@deepseek-ai/dsh-client-ui-sidebar": "0.1.7-alpha.1",
+    "@deepseek-ai/dsh-client-ui-renderer": "0.1.7-alpha.1",
+    "@deepseek-ai/dsh-client-locale": "0.1.7-alpha.1",
+    "@types/react": "^18.3.1",
+    "react": "^18.3.1",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.9.3",
+    "@types/react-dom": "~18.3.0",
+    "clsx": "^2.0.0",
+    "diff": "^9.0.0",
+    "react-dom": "^18.2.0",
+    "anser": "^2.3.5",
+    "katex": "^0.16.47",
+    "micromark-core-commonmark": "^2.0.3",
+    "micromark-util-character": "^2.1.1",
+    "micromark-util-classify-character": "^2.0.1",
+    "micromark-util-symbol": "^2.0.1",
+    "micromark-util-types": "^2.0.2",
+    "shiki": "^4.3.1",
+    "@shikijs/langs": "^4.3.1",
+    "@types/mdast": "^4.0.4",
+    "micromark-factory-space": "^2.0.1",
+    "micromark-extension-math": "^3.1.0",
+    "mdast-util-from-markdown": "^2.0.3",
+    "mdast-util-gfm": "^3.1.0",
+    "mdast-util-math": "^3.0.0",
+    "micromark-extension-gfm": "^3.0.0",
+    "micromark-util-sanitize-uri": "^2.0.1",
+    "simple-icons": "16.31.0",
+    "zustand": "^5.0.15",
+    "immer": "^11.1.18",
+    "vitest": "^3.2.7",
+    "jsdom": "^30.1.1",
+    "@testing-library/react": "^16.3.3",
+    "@deepseek-ai/dsh-util-workspace-path": "0.1.7-alpha.1"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranzLi347/dsh-workspace-colors.git"
+  },
+  "homepage": "https://github.com/FranzLi347/dsh-workspace-colors#readme",
+  "bugs": {
+    "url": "https://github.com/FranzLi347/dsh-workspace-colors/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "workspace",
+    "colors"
+  ]
+}
